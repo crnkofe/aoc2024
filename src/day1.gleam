@@ -3,21 +3,11 @@ import gleam/int
 import gleam/list
 import gleam/string
 import file_streams/file_stream as fs
-import file_streams/file_stream_error as fse
-
-fn read_loop(f, res) {
-  case fs.read_line(f) {
-    Ok(line) -> {
-        read_loop(f, [line, ..res])
-    }
-    Error(fse.Eof) -> list.reverse(res)
-    _ -> panic as "can't read file"
-  }
-}
+import util
 
 fn read_file(filename) {
   let assert Ok(f) = fs.open_read(filename)
-  let lines = read_loop(f, [])
+  let lines = util.read_loop(f, [])
 
   let split_pairs = list.map(lines, fn(x) {
     let assert Ok(fmt_pair) = string.split_once(x, "   ")
