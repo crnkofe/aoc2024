@@ -11,3 +11,9 @@ pub fn read_loop(f, res) {
     _ -> panic as "can't read file"
   }
 }
+
+pub fn assert_nth(lst, index) {
+  let result = list.drop(lst, index)
+  let assert Ok(first) = list.first(result)
+  first
+}

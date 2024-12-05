@@ -16,6 +16,7 @@ description = "Advent of Code 2024 in Gleam!"
 gleam_stdlib = ">= 0.45.0 and < 2.0.0"
 file_streams = ">= 1.2.2 and < 2.0.0"
 gleam_regexp = ">= 1.0.0 and < 2.0.0"
+fmt = ">= 0.1.0 and < 1.0.0"
 
 [dev-dependencies]
 gleeunit = ">= 1.0.0 and < 2.0.0"
