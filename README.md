@@ -2,6 +2,8 @@
 
 This project uses Gleam 1.6.2
 
+To try out solutions for particular day make sure to save an input file as `dayN.txt`
+
 ## Development
 
 ```sh
