@@ -2,12 +2,11 @@
 
 This project uses Gleam 1.6.2
 
-To try out solutions for particular day make sure to save an input file as `dayN.txt`
+To try out solutions for particular day make sure to save an input file as 'testN.txt', `dayN.txt` respectively.
 
 ## Development
 
 ```sh
-gleam run   # Run the project
-gleam test  # Run the tests
+gleam run -m day8  # Run the project
 ```
 
