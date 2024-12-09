@@ -1,3 +1,5 @@
+import gleam/io
+import gleam/int
 import gleam/list
 import file_streams/file_stream as fs
 import file_streams/file_stream_error as fse
@@ -34,4 +36,10 @@ pub fn assert_nth(lst, index) {
 
 pub fn point_in_map(p: Point, map_size: Int) -> Bool {
   p.0 >= 0 && p.0 < map_size && p.1 >= 0 && p.1 < map_size
+}
+
+pub fn print_num(prefix: String, n: Int) {
+  io.print(prefix)
+  io.print(": ")
+  n |> int.to_string |> io.println
 }
