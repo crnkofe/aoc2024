@@ -10,6 +10,10 @@ pub fn point_add(p1: Point, p2: Point) -> Point {
   #(p1.0 + p2.0, p1.1 + p2.1)
 }
 
+pub fn point_mul(p1: Point, n: Int) -> Point {
+  #(p1.0 * n, p1.1 * n)
+}
+
 pub fn point_sub(p1: Point, p2: Point) -> Point {
   point_add(p1, point_neg(p2))
 }
