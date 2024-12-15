@@ -4,6 +4,8 @@ import gleam/list
 import file_streams/file_stream as fs
 import file_streams/file_stream_error as fse
 
+pub const max_int = 9007199254740991
+
 type Point = #(Int, Int)
 
 pub fn point_add(p1: Point, p2: Point) -> Point {
